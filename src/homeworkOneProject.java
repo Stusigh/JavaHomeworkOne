@@ -10,6 +10,10 @@ public class homeworkOneProject {
 //        int 1illegalInteger = 42;
 //        System.out.println(1illegalInteger);
 
+        System.out.println("JAVA. IT IS A STATEMENT.");
+
+        System.out.println("java: ';' expected\nJust kidding!");
+
         String this$houldntBeLegal = "All hail the Hypno Toad"; // this contains the character $ but is still legal?
         System.out.println(this$houldntBeLegal);
 
@@ -20,25 +24,29 @@ public class homeworkOneProject {
         }
 
         //These are different variables as they have different cases.
-        int THISISNOTTHAT = 15;
+        int THISISNOTTHAT = 15; // reserved for constants.
         double thisisnotthat = 17.854;
+        System.out.println(thisisnotthat + THISISNOTTHAT);
 
 
 //        float System = 15.5F;
-//        Can't use reserved words as variable names
+//        You shouldn't use System as a variable name, but you totally can if you don't mind breaking everything.
+        System.out.println("java: float cannot be dereferenced. So apparently you *can*!");
 
         //Below I wrote a program to find the absolute value of an input integer.
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter a number to get the absolute value: ");
         int numberToBeProcessed = Integer.parseInt(sc.nextLine());
+        //Reads in the number to be processed.
 
         System.out.println("Was that correct? Y/N? ");
         String correctOrNotRaw = sc.nextLine();
         String correctOrNot = correctOrNotRaw.toLowerCase();
+        //Makes sure the number is correct and makes sure it's lower case.
 
         if(correctOrNot.equals("y")) {
-            System.out.println(Math.abs(numberToBeProcessed));
+            System.out.println(Math.abs(numberToBeProcessed)); //returns the absolute value of the number
         }
         else if(correctOrNot.equals("n")) {
             System.out.println("I'm sorry to hear that. Please run me again.");
